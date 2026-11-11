@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="420" viewBox="0 0 860 420" font-family="Arial, Helvetica, sans-serif">
+  <rect width="860" height="420" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="430" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#222">G-MOUSE Connector Pinout (4-Pin, Molex) / 4芯连接器引脚图</text>
+
+  <!-- ============ Connector view ============ -->
+  <!-- cable -->
+  <g stroke="#555" stroke-width="2" fill="none">
+    <path d="M40 200 Q 70 185 100 190 L 150 195"/>
+    <path d="M40 225 Q 70 240 100 235 L 150 230"/>
+    <line x1="40" y1="200" x2="40" y2="225"/>
+    <line x1="150" y1="195" x2="150" y2="230"/>
+  </g>
+  <!-- connector body -->
+  <rect x="150" y="180" width="60" height="60" fill="#e8e8e8" stroke="#555" stroke-width="2"/>
+  <rect x="210" y="170" width="90" height="80" fill="#dcdcdc" stroke="#555" stroke-width="2"/>
+  <rect x="300" y="175" width="55" height="70" fill="#e8e8e8" stroke="#555" stroke-width="2"/>
+  <!-- latch -->
+  <path d="M355 185 h30 a8 8 0 0 1 0 16 h-30 z" fill="#dcdcdc" stroke="#555" stroke-width="2"/>
+
+  <!-- pin face (enlarged) -->
+  <g transform="translate(480,60)">
+    <rect x="0" y="0" width="180" height="150" fill="#f5f5f5" stroke="#333" stroke-width="2"/>
+    <rect x="30" y="40" width="120" height="80" fill="#ffffff" stroke="#333" stroke-width="2"/>
+    <!-- pins: top row 3 4 ; bottom row 1 2 -->
+    <g stroke="#333" stroke-width="2">
+      <rect x="45"  y="55" width="38" height="22" fill="#ffe9b0"/>
+      <rect x="97"  y="55" width="38" height="22" fill="#ffe9b0"/>
+      <rect x="45"  y="85" width="38" height="22" fill="#ffe9b0"/>
+      <rect x="97"  y="85" width="38" height="22" fill="#ffe9b0"/>
+    </g>
+    <text x="64"  y="71" text-anchor="middle" font-size="15" font-weight="bold">3</text>
+    <text x="116" y="71" text-anchor="middle" font-size="15" font-weight="bold">4</text>
+    <text x="64"  y="101" text-anchor="middle" font-size="15" font-weight="bold">1</text>
+    <text x="116" y="101" text-anchor="middle" font-size="15" font-weight="bold">2</text>
+    <text x="90" y="172" text-anchor="middle" font-size="13" fill="#444">Connector Front View / 连接器正面视图</text>
+    <text x="90" y="190" text-anchor="middle" font-size="12" fill="#777">3 4</text>
+    <text x="90" y="206" text-anchor="middle" font-size="12" fill="#777">1 2</text>
+  </g>
+
+  <!-- arrow from cable to pin face -->
+  <g stroke="#888" stroke-width="3" fill="#888">
+    <line x1="365" y1="210" x2="455" y2="150"/>
+    <polygon points="462,145 446,146 452,160"/>
+  </g>
+
+  <!-- ============ Pin table ============ -->
+  <g transform="translate(40,250)">
+    <text x="0" y="-8" font-size="16" font-weight="bold" fill="#222">Pin Definition / 引脚定义</text>
+    <rect x="0" y="0" width="780" height="30" fill="#a6a6a6"/>
+    <rect x="0" y="30"  width="780" height="26" fill="#ffffff"/>
+    <rect x="0" y="56"  width="780" height="26" fill="#f2f2f2"/>
+    <rect x="0" y="82"  width="780" height="26" fill="#ffffff"/>
+    <rect x="0" y="108" width="780" height="26" fill="#f2f2f2"/>
+    <g fill="none" stroke="#333" stroke-width="1.5">
+      <rect x="0" y="0" width="780" height="134"/>
+      <line x1="0" y1="30" x2="780" y2="30"/>
+      <line x1="0" y1="56" x2="780" y2="56"/>
+      <line x1="0" y1="82" x2="780" y2="82"/>
+      <line x1="0" y1="108" x2="780" y2="108"/>
+      <line x1="90" x2="90" y1="0" y2="134"/>
+      <line x1="210" x2="210" y1="0" y2="134"/>
+      <line x1="500" x2="500" y1="0" y2="134"/>
+    </g>
+    <g font-size="14" fill="#111" text-anchor="middle">
+      <text x="45"  y="20" font-weight="bold">Pin No.</text>
+      <text x="150" y="20" font-weight="bold">I/O</text>
+      <text x="355" y="20" font-weight="bold">Description</text>
+      <text x="640" y="20" font-weight="bold">Remark</text>
+
+      <text x="45"  y="48">1</text><text x="150" y="48">I</text>
+      <text x="355" y="48">RS232_RX</text><text x="640" y="48">RS232 Serial Data Input</text>
+
+      <text x="45"  y="74">2</text><text x="150" y="74">G</text>
+      <text x="355" y="74">GND</text><text x="640" y="74">Ground</text>
+
+      <text x="45"  y="100">3</text><text x="150" y="100">O</text>
+      <text x="355" y="100">RS232_TX</text><text x="640" y="100">RS232 Serial Data Output</text>
+
+      <text x="45"  y="126">4</text><text x="150" y="126">I</text>
+      <text x="355" y="126">VCC</text><text x="640" y="126">Module Power Supply (5V)</text>
+    </g>
+  </g>
+
+  <!-- note -->
+  <text x="430" y="412" text-anchor="middle" font-size="12" fill="#777">Note: 12m total cable length is close to the RS232 reliable-distance limit; use AWG22 or thicker wire for VCC/GND.</text>
+</svg>
